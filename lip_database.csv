@@ -1,0 +1,54 @@
+lip_name,age_ma,age_err,llsvp_domain,plume_source,reference
+# ═══════════════════════════════════════════════════════════════
+# Large Igneous Provinces — absolute ages, past ~1 Gyr
+# Compiled from Ernst (2014) "Large Igneous Provinces" (Cambridge),
+# Ernst & Buchan LIP record, Svensen et al. compilations,
+# and superplume-domain assignments after Torsvik et al. (2006, 2010)
+# plate reconstructions to the African (Tuzo) and Pacific (Jason) LLSVPs.
+#
+# llsvp_domain: African | Pacific | Neither(plate-interior/ambiguous)
+# ═══════════════════════════════════════════════════════════════
+Columbia River Basalt,16.7,0.2,Pacific,Yellowstone,Ernst2014
+Ethiopia-Yemen (Afar),30.0,1.0,African,Afar,Ernst2014
+North Atlantic (Brito-Arctic),56.0,1.0,African,Iceland,Ernst2014
+Deccan Traps,65.5,0.5,African,Reunion,Ernst2014
+Madagascar,87.6,0.6,African,Marion,Ernst2014
+Caribbean-Colombian,90.0,2.0,Pacific,Galapagos,Ernst2014
+High Arctic (HALIP),121.0,2.0,African,Iceland-precursor,Ernst2014
+Ontong Java (main),122.0,1.0,Pacific,Louisville,Ernst2014
+Rajmahal,118.0,1.0,African,Kerguelen,Ernst2014
+Kerguelen-Rajmahal,130.0,2.0,African,Kerguelen,Ernst2014
+Parana-Etendeka,134.0,1.0,African,Tristan,Ernst2014
+Comei-Bunbury,132.0,2.0,African,Kerguelen,Ernst2014
+Karoo-Ferrar,183.0,1.0,African,Bouvet,Ernst2014
+Central Atlantic (CAMP),201.5,0.5,African,CAMP-source,Ernst2014
+Siberian Traps,251.9,0.3,African,Siberian,Ernst2014
+Emeishan,259.0,3.0,Pacific,Hainan,Ernst2014
+Panjal Traps,289.0,3.0,African,Panjal-source,Ernst2014
+Skagerrak (SCANDES),297.0,4.0,African,Skagerrak,Ernst2014
+Tarim,275.0,3.0,Pacific,Tarim-source,Ernst2014
+Kalkarindji (Australia),510.0,2.0,Pacific,Kalkarindji,Ernst2014
+Wichita,535.0,5.0,African,Wichita,Ernst2014
+Central Iapetus (CIMP),615.0,5.0,African,CIMP-source,Ernst2014
+Franklin,716.0,2.0,Pacific,Franklin,Ernst2014
+Gunbarrel,780.0,3.0,Pacific,Gunbarrel,Ernst2014
+Willouran (Gairdner),827.0,6.0,Pacific,Willouran,Ernst2014
+Wooltana,830.0,10.0,Pacific,Wooltana,Ernst2014
+Guibei,820.0,10.0,Pacific,Guibei,Ernst2014
+Dovyren,728.0,5.0,African,Dovyren,Ernst2014
+Kanding,800.0,10.0,Pacific,Kanding,Ernst2014
+Mundine Well,755.0,3.0,Pacific,Mundine,Ernst2014
+Dashigou,925.0,10.0,Pacific,Dashigou,Ernst2014
+Warakurna,1075.0,10.0,Pacific,Warakurna,Ernst2014
+Umkondo,1110.0,3.0,African,Umkondo,Ernst2014
+Keweenawan (Midcontinent),1108.0,1.0,African,Keweenawan,Ernst2014
+Mackenzie,1267.0,2.0,African,Mackenzie,Ernst2014
+Sudbury dykes,1238.0,4.0,African,Sudbury,Ernst2014
+Marnda Moorn,1210.0,10.0,Pacific,Marnda,Ernst2014
+Galiwinku,1313.0,15.0,Pacific,Galiwinku,Ernst2014
+Derim Derim-Galiwinku,1320.0,15.0,Pacific,Derim,Ernst2014
+Lakeview,1380.0,10.0,African,Lakeview,Ernst2014
+Western Channel,1590.0,10.0,Pacific,WChannel,Ernst2014
+Hart-Carson,1790.0,10.0,Pacific,HartCarson,Ernst2014
+Avanavero,1790.0,10.0,African,Avanavero,Ernst2014
+Circum-Superior,1880.0,10.0,African,CircumSup,Ernst2014
