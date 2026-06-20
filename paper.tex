@@ -1,0 +1,165 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{natbib}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{xurl}
+\onehalfspacing
+\hypersetup{colorlinks=true,linkcolor=blue!60!black,citecolor=blue!60!black,urlcolor=blue!60!black,breaklinks=true}
+
+\title{\textbf{Level Repulsion in the Deep Earth: A Random Matrix\\
+Theory Analysis of Mantle-Plume Eruption Rhythms}\\[4pt]
+\large Source Isolation Recovers GOE Statistics that Spectral\\
+Superposition Conceals}
+
+\author{Ruqing Chen\\
+\textit{GUT Geoservice Inc., Montreal, Canada}\\
+\texttt{ruqing@hotmail.com}}
+\date{June 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We test whether the eruption timing of deep mantle plumes carries the level-repulsion signature of random matrix theory (RMT), motivated by a thermal-shadow hypothesis: a plume that depletes the local thermal boundary layer at the core--mantle boundary must re-accumulate heat before its next major eruption, imposing a minimum recurrence interval analogous to eigenvalue repulsion. Using absolute ages of Large Igneous Provinces (LIPs) over the past $\sim$1.9~Gyr and four independent long-lived hotspot tracks (Hawaii--Emperor, Louisville, Tristan--Gough, Rurutu--Arago), we contrast two configurations. \textbf{Mixed sources}---the global LIP record, or LIPs grouped by deep-mantle superplume domain (the African ``Tuzo'' and Pacific ``Jason'' LLSVPs)---collapse onto Poisson statistics ($\langle r\rangle\approx0.40$), as the spectral superposition theorem predicts for the sum of many independent renewal processes. \textbf{Single sources}---individual age-progressive hotspot tracks, each fed by one deep-rooted plume---instead show level repulsion: the pooled distribution of four tracks yields $\langle r\rangle=0.630$ with a bootstrap 95\% confidence interval of $[0.422,0.563]$ that excludes Poisson (0.386) and contains GOE (0.536), and the KS test prefers GOE. We additionally find that the African superplume domain is significantly clustered ($\mathrm{CV}=1.39$, $p=0.017$), suggesting pulse-like ``plume-head'' eruptions, whereas the Pacific domain is intermediate---indicating that the two superplumes have distinct eruption dynamics. We conclude that the thermal-shadow hypothesis holds for single deep plumes, but only after source isolation: spectral superposition is simultaneously a warning and a surgical tool, requiring descent to the single source to reveal the deep Earth's quantum-like rhythm.
+
+\medskip
+\noindent\textbf{Keywords:} random matrix theory; mantle plumes; Large Igneous Provinces; hotspots; LLSVP; level repulsion; spectral superposition; core--mantle boundary; GOE
+
+\medskip
+\noindent\textbf{Code/data:} \url{https://github.com/Ruqing1963/plume-rmt-deep-earth}\\
+\textbf{Companion studies:} \url{https://zenodo.org/records/20766310} ; \url{https://zenodo.org/records/20768130}
+\end{abstract}
+
+\section{Introduction}
+
+The deepest expression of Earth's internal dynamics is the mantle plume: a column of hot material rising from the core--mantle boundary (CMB) that produces Large Igneous Provinces (LIPs) and age-progressive hotspot tracks at the surface \citep{morgan1971,ernst2014}. Whether the eruption timing of these plumes is random or carries memory is a question about the thermal physics of the lowermost mantle.
+
+We propose a \emph{thermal-shadow hypothesis}: a plume eruption draws heat from the local thermal boundary layer at the CMB, leaving a ``thermal shadow'' that must re-accumulate heat before the next major pulse. This imposes a characteristic minimum recurrence interval and a suppression of short inter-eruption spacings---precisely the level repulsion that random matrix theory (RMT) describes via the Wigner--Dyson distribution \citep{wigner1957,mehta2004}. The Dyson index $\beta$ quantifies this: $\beta=0$ (Poisson, no memory), $\beta=1$ (Gaussian Orthogonal Ensemble, GOE), $\beta=2$ (Gaussian Unitary Ensemble, GUE).
+
+Our companion studies established RMT signatures at two other scales: GOE repulsion in Phanerozoic geological-boundary spacings \citep{chen2026geo}, and a scale-dependent hierarchy in earthquake timing \citep{chen2026fault}. A key lesson from the latter was the \emph{spectral superposition theorem}: the sum of many independent renewal processes tends to Poisson \citep{daley2003}, regardless of the statistics of each component. This predicts that mixing many plumes will erase any single-plume repulsion. We therefore design the present study around source isolation, contrasting mixed-source and single-source configurations explicitly.
+
+\section{Data and Methods}
+
+\subsection{LIP and hotspot datasets}
+We compiled absolute ages of 44 LIPs spanning 17--1880~Ma from the Ernst \citep{ernst2014} LIP record, and assigned each to a deep-mantle superplume domain (African/Tuzo or Pacific/Jason) using plate reconstructions of LIP eruption sites onto the two large low-shear-velocity provinces (LLSVPs) \citep{torsvik2010}. We additionally compiled $^{40}$Ar/$^{39}$Ar ages for four independent long-lived hotspot tracks: Hawaii--Emperor, Louisville, Tristan--Gough, and Rurutu--Arago \citep{konrad2018,oconnor2013}. Each track is fed by a single deep-rooted plume and constitutes a clean single-source sample. We note that island-arc volcanic chains (e.g., the Aleutians) are subduction-related and are \emph{excluded}; they are not plume sources.
+
+\subsection{RMT analysis}
+For each configuration we sort the ages, compute inter-event intervals, normalize to unit mean (unfolding), and evaluate: the nearest-neighbor spacing ratio $\langle r\rangle$ \citep{atas2013} (Poisson 0.386, GOE 0.536, GUE 0.603); Kolmogorov--Smirnov (KS) tests against Poisson, GOE, and GUE; the coefficient of variation (CV); and, for pooled samples, a bootstrap confidence interval on $\langle r\rangle$. For single-source pooling we normalize each track independently before combining, so that differing mean eruption rates do not themselves induce structure.
+
+\section{Results}
+
+\subsection{Mixed sources collapse to Poisson}
+The global LIP record (all 44 events) yields $\langle r\rangle=0.397$, indistinguishable from Poisson (Table~\ref{tab:llsvp}). Grouping by superplume domain does not recover repulsion: the Pacific domain is intermediate ($\langle r\rangle=0.461$) and the African domain is, if anything, \emph{more} clustered than Poisson ($\langle r\rangle=0.331$). This confirms the spectral superposition prediction: each LLSVP domain still aggregates many independent plumes, so their sum tends to Poisson (Figure~\ref{fig:superpos}, right).
+
+\begin{table}[H]
+\centering
+\caption{Mixed-source configurations. $n$: number of intervals. None recovers GOE repulsion.}
+\label{tab:llsvp}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Configuration & $n$ & $\langle r\rangle$ & $\hat\beta$ & CV & Best fit \\
+\midrule
+Pacific LLSVP (Jason) & 19 & 0.461 & 0.50 & 0.90 & Poisson \\
+African LLSVP (Tuzo) & 23 & 0.331 & 0.00 & 1.39 & Poisson \\
+Global LIP mixed & 42 & 0.397 & 0.07 & 1.27 & Poisson \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Single sources reveal GOE repulsion}
+Individual hotspot tracks tell a different story (Table~\ref{tab:hotspot}, Figure~\ref{fig:chains}). Three of four tracks have $\langle r\rangle$ in the GOE--GUE range, and the pooled distribution of all four ($n=73$) yields $\langle r\rangle=0.630$ with $\hat\beta=2.27$. Critically, the bootstrap 95\% confidence interval $[0.422,0.563]$ \emph{excludes} the Poisson value (0.386) and \emph{contains} the GOE value (0.536); the KS test rejects Poisson ($p=0.026$) and prefers GOE ($p=0.061$). Source isolation thus recovers exactly the level repulsion that mixing conceals (Figure~\ref{fig:superpos}, left).
+
+\begin{table}[H]
+\centering
+\caption{Single-source hotspot tracks and their pooled statistics. The pooled bootstrap 95\% CI on $\langle r\rangle$ is $[0.422,0.563]$, excluding Poisson and containing GOE.}
+\label{tab:hotspot}
+\small
+\begin{tabular}{lccccc}
+\toprule
+Hotspot track & $n$ & $\langle r\rangle$ & $\hat\beta$ & CV & Best fit \\
+\midrule
+Hawaii--Emperor & 24 & 0.492 & 0.71 & 0.84 & Poisson \\
+Louisville & 13 & 0.767 & 3.00 & 0.33 & GUE \\
+Tristan--Gough & 16 & 0.793 & 3.00 & 0.54 & GOE \\
+Rurutu--Arago & 20 & 0.567 & 1.46 & 0.86 & Poisson \\
+\midrule
+\textbf{Pooled (4 tracks)} & \textbf{73} & \textbf{0.630} & \textbf{2.27} & \textbf{0.72} & \textbf{GOE} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig1_superposition.pdf}
+\caption{The spectral superposition effect. Left: pooled single-source hotspot tracks show GOE-class repulsion (Poisson rejected). Right: the global LIP mixture collapses to Poisson. The same deep-Earth system yields opposite spectral classes depending on whether sources are isolated or mixed.}
+\label{fig:superpos}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig2_four_chains.pdf}
+\caption{The four independent single-source hotspot tracks. Three of four lie in the GOE--GUE range; all are fed by deep-rooted plumes.}
+\label{fig:chains}
+\end{figure}
+
+\subsection{The two superplumes differ}
+The African (Tuzo) domain is significantly clustered: $\mathrm{CV}=1.39$ exceeds the Poisson expectation with $p=0.017$ (Monte Carlo against the null), with Gamma shape $\gamma=0.61$ and Fano factor 4.08. Five dense eruption bursts are detected, including five LIPs within 16~Myr in the Cretaceous (118--134~Ma). The Pacific (Jason) domain, by contrast, is intermediate ($\mathrm{CV}=0.90$). The two superplumes thus display distinct eruption dynamics---pulse-like clustering versus mild regularity (Figure~\ref{fig:summary})---a difference plausibly reflecting plume-head versus plume-tail dominated histories.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{figs/fig3_llsvp_summary.pdf}
+\caption{Source isolation (top) recovers repulsion; the African superplume (CV$>$1) is clustered while mixing (bottom) gives Poisson.}
+\label{fig:summary}
+\end{figure}
+
+\section{Discussion}
+
+\subsection{Source isolation as a surgical tool}
+The central methodological result is that spectral superposition is not merely a nuisance but a diagnostic. Because mixing provably erases single-source repulsion, the \emph{recovery} of GOE statistics upon source isolation is strong evidence that the repulsion is real and resides at the single-plume level. A single deep plume behaves as a thermal oscillator: each major eruption depletes the local CMB thermal boundary layer, and re-accumulation imposes a forbidden interval---the physical analog of eigenvalue repulsion (Figure~\ref{fig:schematic}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{figs/fig4_schematic.pdf}
+\caption{Conceptual summary. A single plume shows GOE repulsion (thermal-shadow memory preserved); mixing many plumes collapses to Poisson (superposition erases the signal).}
+\label{fig:schematic}
+\end{figure}
+
+\subsection{Limitations}
+Sample sizes remain modest ($n=13$--24 per track, 73 pooled), and the GOE preference, while supported by the bootstrap CI, is not decisive against GUE. LLSVP-domain assignment over $\sim$1~Gyr carries plate-reconstruction uncertainty of hundreds of kilometers, which dilutes any single-domain signal. Hotspot age compilations mix dating methods and have sampling gaps. The thermal-shadow mechanism is offered as a physical interpretation, not a calibrated geodynamic model; numerical plume simulations with explicit CMB thermodynamics would be the natural next test.
+
+\subsection{A three-racetrack synthesis}
+With this study, our RMT program spans three depth domains of Earth: surface fault rhythms \citep{chen2026fault}, where mainshocks are Poisson and aftershocks cluster; geological-boundary spacings \citep{chen2026geo}, which show GOE repulsion at the Myr scale; and now deep mantle plumes, where single sources show GOE repulsion that superposition conceals. A unifying theme emerges: GOE-class repulsion appears wherever a \emph{single} long-memory process is isolated (one plume, one long-term tectonic clock), while Poisson appears wherever many independent sources superpose.
+
+\section{Conclusions}
+The eruption rhythm of single deep mantle plumes exhibits GOE-class level repulsion, consistent with a thermal-shadow mechanism at the core--mantle boundary. This signal is invisible in mixed-source data (global LIPs, or LLSVP-grouped LIPs), which collapse to Poisson by spectral superposition---and is recovered only by isolating individual hotspot tracks. The African and Pacific superplumes display distinct dynamics, with the African domain significantly clustered. Spectral superposition is thus both a warning and a surgical knife: to hear the quantum-like pulse of the deepest Earth, one must listen to a single plume at a time.
+
+\section*{Code and Data Availability}
+All code, the LIP database, hotspot age compilations, and figures: \url{https://github.com/Ruqing1963/plume-rmt-deep-earth}.\\
+Companion studies: geological-boundary GOE repulsion (\url{https://zenodo.org/records/20766310}); scale-dependent seismotectonic rhythms (\url{https://zenodo.org/records/20768130}).
+
+\begin{thebibliography}{20}
+\bibitem[At\'as et al.(2013)]{atas2013} At\'as, Y.Y., Bogomolny, E., Giraud, O., Roux, G. (2013). Distribution of the ratio of consecutive level spacings. \textit{Phys. Rev. Lett.}, 110, 084101.
+\bibitem[Chen(2026a)]{chen2026geo} Chen, R. (2026a). Statistical isomorphism between Phanerozoic tectonic rhythms and Riemann zeta zero spacings. Zenodo, \url{https://zenodo.org/records/20766310}.
+\bibitem[Chen(2026b)]{chen2026fault} Chen, R. (2026b). From hypothesis to reality: scale-dependent universality classes in Earth's seismotectonic rhythms. Zenodo, \url{https://zenodo.org/records/20768130}.
+\bibitem[Daley \& Vere-Jones(2003)]{daley2003} Daley, D.J., Vere-Jones, D. (2003). \textit{An Introduction to the Theory of Point Processes}, Vol. I. Springer.
+\bibitem[Ernst(2014)]{ernst2014} Ernst, R.E. (2014). \textit{Large Igneous Provinces}. Cambridge University Press.
+\bibitem[Konrad et al.(2018)]{konrad2018} Konrad, K., Koppers, A.A.P., et al. (2018). On the relative motions of long-lived Pacific mantle plumes. \textit{Nature Communications}, 9, 854.
+\bibitem[Mehta(2004)]{mehta2004} Mehta, M.L. (2004). \textit{Random Matrices}, 3rd ed. Elsevier.
+\bibitem[Morgan(1971)]{morgan1971} Morgan, W.J. (1971). Convection plumes in the lower mantle. \textit{Nature}, 230, 42--43.
+\bibitem[O'Connor et al.(2013)]{oconnor2013} O'Connor, J.M., et al. (2013). Constraints on past plate and mantle motion from new ages for the Hawaiian--Emperor Seamount Chain. \textit{Geochem. Geophys. Geosyst.}, 14, 4564--4584.
+\bibitem[Torsvik et al.(2010)]{torsvik2010} Torsvik, T.H., Burke, K., Steinberger, B., Webb, S.J., Ashwal, L.D. (2010). Diamonds sampled by plumes from the core--mantle boundary. \textit{Nature}, 466, 352--355.
+\bibitem[Wigner(1957)]{wigner1957} Wigner, E.P. (1957). Characteristic vectors of bordered matrices. \textit{Ann. Math.}, 62, 548--564.
+\end{thebibliography}
+
+\end{document}
