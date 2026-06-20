@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: >-
+  Level Repulsion in the Deep Earth: A Random Matrix Theory
+  Analysis of Mantle-Plume Eruption Rhythms
+message: If you use this software or data, please cite it using this metadata.
+type: software
+authors:
+  - given-names: Ruqing
+    family-names: Chen
+    email: ruqing@hotmail.com
+    affiliation: 'GUT Geoservice Inc., Montreal, Canada'
+repository-code: 'https://github.com/Ruqing1963/plume-rmt-deep-earth'
+abstract: >-
+  Random matrix theory analysis of mantle-plume eruption rhythms. Single
+  deep-plume hotspot tracks (Hawaii-Emperor, Louisville, Tristan-Gough,
+  Rurutu-Arago) show GOE level repulsion consistent with a thermal-shadow
+  mechanism at the core-mantle boundary; mixing many plumes (global LIPs or
+  LLSVP-grouped) collapses to Poisson by spectral superposition. The African
+  and Pacific superplumes show distinct eruption dynamics. Third in a
+  three-racetrack RMT program spanning Earth from crust to core.
+keywords:
+  - random matrix theory
+  - mantle plumes
+  - Large Igneous Provinces
+  - hotspots
+  - LLSVP
+  - level repulsion
+  - spectral superposition
+  - core-mantle boundary
+  - GOE
+license: MIT
+version: 1.0.0
+date-released: '2026-06-19'
